@@ -2,46 +2,46 @@ package com.problemsolving;
 
 public class BankDemo {
 
-    public static void main(String[] args) {
+	public static void main(String[] args) {
 
-        BankAccount account;
+		BankAccount account;
 
-        account = new SavingsAccount(101, "Rahul", 20000);
+		account = new SavingsAccount(101, "Rahul", 20000);
 
-        System.out.println("===== Savings Account =====");
+		System.out.println("===== Savings Account =====");
 
-        account.displayDetails();
+		account.displayDetails();
 
-        System.out.println();
+		System.out.println();
 
-        account.deposit(5000);
+		account.deposit(5000);
 
-        System.out.println();
+		System.out.println();
 
-        account.withdraw(10000);
+		account.withdraw(10000);
 
-        System.out.println();
+		System.out.println();
 
-        account.withdraw(14500);
+		account.withdraw(14500);
 
-        System.out.println("\n============================\n");
+		System.out.println("\n============================\n");
 
-        account = new CurrentAccount(102, "Akhil", 20000);
+		account = new CurrentAccount(102, "Akhil", 20000);
 
-        System.out.println("===== Current Account =====");
+		System.out.println("===== Current Account =====");
 
-        account.displayDetails();
+		account.displayDetails();
 
-        System.out.println();
+		System.out.println();
 
-        account.deposit(5000);
+		account.deposit(5000);
 
-        System.out.println();
+		System.out.println();
 
-        account.withdraw(25000);
+		account.withdraw(25000);
 
-        System.out.println();
+		System.out.println();
 
-        account.withdraw(5001);
-    }
+		account.withdraw(5001);
+	}
 }
