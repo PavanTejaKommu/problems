@@ -3,8 +3,6 @@ package com.functionaIinterface;
 import java.util.function.Function;
 
 public class Example6 {
-
-
 	private  String name ;
 	private String designation;
 	private double salary;
@@ -15,70 +13,45 @@ public class Example6 {
 		this.salary= salry;
 	}
 
-
-
-
-
 	public String getName() {
 		return name;
 	}
-
-
-
-
 
 	public void setName(String name) {
 		this.name = name;
 	}
 
-
-
-
-
 	public String getDesignation() {
 		return designation;
 	}
-
-
-
-
 
 	public void setDesignation(String designation) {
 		this.designation = designation;
 	}
 
-
-
-
-
 	public double getSalary() {
 		return salary;
 	}
-
-
-
-
 
 	public void setSalary(double salary) {
 		this.salary = salary;
 	}
 
-
-
-
+	@Override
+	public String toString() {
+		return "Example6 [name=" + name + ", designation=" + designation + ", salary=" + salary + "]";
+	}
 
 	public static void main(String[] args) {
 
-
-
 		Example6 obj = new Example6("Teja \n", " SD \n", 50000.0);
-
 
 		Function<Example6, String> fun2 = new Function<Example6, String>() {
 
 			@Override
 			public String apply(Example6 obj) {
 				return ("Name : "+obj.getName()) + ("Designation : "+obj.getDesignation()) + ("salary : "+obj.getSalary());
+//			return obj.toString();
 			}
 		};
 

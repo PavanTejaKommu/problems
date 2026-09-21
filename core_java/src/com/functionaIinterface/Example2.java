@@ -74,7 +74,7 @@ public class Example2 {
 	Predicate<Employe> pr = new Predicate<Employe>() {
 		
 		@Override
-		public boolean test(Employe t) {
+		public boolean test(Employe e) {
 			return false;
 		}
 	};
