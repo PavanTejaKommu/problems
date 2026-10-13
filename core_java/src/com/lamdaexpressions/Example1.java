@@ -1,11 +1,9 @@
 package com.lamdaexpressions;
 
-
 interface NumberChecker{
 	boolean checkNumber( int num);
-	
-}
 
+}
 
 
 interface CharChecker{
@@ -13,7 +11,7 @@ interface CharChecker{
 }
 
 public class Example1 {
-	
+
 	public static boolean isPrime(int num) {
 		for(int i =2 ; i * i < num ; i++) {
 			if(num % i == 0) {
@@ -22,12 +20,12 @@ public class Example1 {
 		}
 		return true;
 	}
-	
+
 	public static void main(String[] args) {
-		
-		
+
+
 		NumberChecker numch = new NumberChecker() {
-			
+
 			@Override
 			public boolean checkNumber(int num) {
 				if(isPrime(num)) {
@@ -40,9 +38,6 @@ public class Example1 {
 		CharChecker charch = ( char ch) -> {
 			return isPrime(ch);
 		};
-			 
-			 System.out.println(charch.checkChar('A')?"Prime " : "Not Prime");
-		 
+		System.out.println(charch.checkChar('A')?"Prime " : "Not Prime");
 	}
-
 }

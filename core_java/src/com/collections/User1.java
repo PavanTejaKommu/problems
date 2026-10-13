@@ -2,7 +2,7 @@ package com.collections;
 
 public class User1 implements Comparable<User1> {
 	
-	private int id;
+	private Integer id;
 	private String name;
 	private double sal;
 	
