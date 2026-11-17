@@ -19,7 +19,7 @@ public class ArrayUsingScanner {
 		for(int i =0 ; i < arr.length;i++) {
 			for(int j =0; j < arr.length;j++) {
 				
-				System.out.println("Enter the  alue to insert at index ["+i+"] ["+j+"]  : ");
+				System.out.println("Enter the  alue to add at index ["+i+"] ["+j+"]  : ");
 				arr[i][j] = sc.nextInt();
 			}
 		}

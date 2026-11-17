@@ -1,6 +1,7 @@
 package com.filehandling;
 
 import java.io.BufferedReader;
+
 import java.io.File;
 import java.io.FileInputStream;
 import java.io.FileOutputStream;
@@ -69,16 +70,16 @@ fis.close();
 
 
 /* Write code 
-				FileOutputStream fos = new FileOutputStream(f1);
+				FileOutaddStream fos = new FileOutaddStream(f1);
 			System.out.println((char) fis.read());
-				FileOutputStream fo = new FileOutputStream(f1);
+				FileOutaddStream fo = new FileOutaddStream(f1);
 				System.out.println(fis.read());
 				System.out.println(fis.read());
 				System.out.println(scd.toString());
 		System.out.println(scd.getClass());
 				File f1 = new File("./new one/text.txt");
-				FileInputStream fi  = new FileInputStream(f1);
-				FileOutputStream fo = new FileOutputStream(f1);
+				FileInaddStream fi  = new FileInaddStream(f1);
+				FileOutaddStream fo = new FileOutaddStream(f1);
 			System.out.println(" Exists check : "+f1.exists());
 						System.out.println("Create file : "+f1.createNewFile());
 				System.out.println(" Exists check : "+f1.exists());

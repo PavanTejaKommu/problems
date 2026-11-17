@@ -1,8 +1,12 @@
 package com.filehandlings;
 
 import java.io.File;
+
+import java.io.FileInputStream;
 import java.io.FileInputStream;
 import java.io.FileOutputStream;
+import java.io.FileOutputStream;
+import java.io.IOException;
 import java.io.IOException;
 import java.util.Arrays;
 
@@ -16,7 +20,7 @@ public class Program2  {
 		File file1 = new File(locationFile1);
 		File file2 = new File(locationFile2);
 		
-		String content = "sample program inserting the data into file one ";
+		String content = "sample program adding the data into file one ";
 		
 		byte [] bytes= content.getBytes();
 		

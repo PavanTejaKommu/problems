@@ -6,9 +6,9 @@ public class Program5 {
 	public static void main(String[] args) {
 
 
-		/*	Add 7 shopping items.
+		/*	add 7 shopping items.
 		Check whether "Milk" is present.
-		Insert "Butter" at index 2.
+		add "Butter" at index 2.
 		Replace "Sugar" with "Brown Sugar".
 		Remove "Soap".
 		Display the updated shopping cart.
@@ -30,7 +30,7 @@ public class Program5 {
 		System.out.println("Milk Contains : "+al.contains("Milk"));
 		al.add(2, "Butter");
 
-		System.out.println("Insert Butter at index 2  completed  ");
+		System.out.println("add Butter at index 2  completed  ");
 
 
 

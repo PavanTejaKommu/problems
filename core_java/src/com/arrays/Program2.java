@@ -18,7 +18,7 @@ public class Program2 {
 			arr[i] = new int [col];
 			for(int j=0; j <col; j++) {
 				
-				System.out.println("Enter Value to insert at ["+i+"] ["+j+"] : ");
+				System.out.println("Enter Value to add at ["+i+"] ["+j+"] : ");
 				arr[i][j] = sc.nextInt();
 			}
 		}

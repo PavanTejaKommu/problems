@@ -5,8 +5,8 @@ import java.util.ArrayList;
 public class Program4 {
 	
 	
-	/* Add 8 employee IDs.
-	Insert 5001 at index 3.
+	/* add 8 employee IDs.
+	add 5001 at index 3.
 	Replace the employee ID at index 5 with 9001.
 	Remove the employee ID at index 2.
 	Display the employee ID at index 4.

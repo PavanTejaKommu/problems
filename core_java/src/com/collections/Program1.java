@@ -33,8 +33,8 @@ public class Program1 {
 
 		Vector<Integer> v = new Vector<>();
 		v.add(23);
-		v.insertElementAt(45, 1);
-		v.insertElementAt(90, 2);
+		//v.putElementAt(45, 1);
+		//v.putElementAt(90, 2);
 		v.set(0, 56);
 
 		System.out.println(v);

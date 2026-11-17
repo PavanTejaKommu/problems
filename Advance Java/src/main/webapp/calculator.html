@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<meta charset="UTF-8">
+	<title>Calculator</title>
+	<link rel="stylesheet" href="./style.css">
+	
+
+</head>
+
+<body>
+
+
+
+	<table class="tableDetails">
+
+		<tr>
+			<td style="width: 300px; height: 300px;">
+				<form action="Main" method="get">
+
+					<label class="textSize">Enter Number : </label><br> <input type="text" name="number_1" id="number1"> <br> <br>
+					<label for="radioSize"> <input type="radio" name="operator" class="radioSize" value="+" > +
+
+					</label> <label for="radioSize"> <input type="radio" name="operator" class="radioSize" value="-"> -
+					</label> <label for="radioSize"> <input type="radio" name="operator" class="radioSize" value="x"> x
+					</label> <label for="radioSize"> <input type="radio" name="operator" class="radioSize" value="/"> /
+						<br> <br>
+						<br>
+					</label> <label class="textSize"> Enter Number : </label> <br> <input type="text" name="number_2" id="number2" >
+					<br> <br> <input type="submit" value="=" class="submitButton">
+
+					<br> <br>
+
+					<button value="1" class="numbersButtons" type="button">1</button>
+
+					
+					<button value="2" class="numbersButtons" type="button">2</button>
+					
+					<button value="3" class="numbersButtons" type="button">3</button>
+					
+					<button value="4" class="numbersButtons" type="button">4</button>
+					
+					<button value="5" class="numbersButtons" type="button">5</button>
+					
+					<button value="6" class="numbersButtons" type="button">6</button>
+					
+					<button value="7" class="numbersButtons" type="button">7</button>
+					
+					<button value="8" class="numbersButtons" type="button">8</button>
+					
+					<button value="9" class="numbersButtons" type="button">9</button>
+					
+					<button value="0" class="numbersButtons" type="button">0</button>
+
+
+				</form>
+
+			</td>
+		</tr>
+	</table>
+
+
+<script>
+
+
+let activeInput = document.getElementById("number1");
+document.getElementById("number1").addEventListener( "focus", function(){
+	activeInput=this;
+});
+document.getElementById("number2").addEventListener("focus", function(){
+	activeInput=this;
+});
+
+
+document.querySelectorAll(".numbersButtons").forEach(function(button){
+	button.addEventListener("click" , function(){
+		activeInput.value +=this.value;
+	});
+});
+
+</script>
+
+
+</body>
+
+</html>

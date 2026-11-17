@@ -35,10 +35,10 @@ public class Program9 {
 		 
 		 if(map.containsKey(c)) {
 			 
-			 map.put(c, map.get(c)+1);
+			 map.add(c, map.get(c)+1);
 			 
 		 }else {
-			 map.put(c, 1);
+			 map.add(c, 1);
 		 }
 	 }
 	 */
@@ -53,7 +53,7 @@ public class Program9 {
 	 /*
 	  * LinkedHashMap ----
 	  * -> for removing duplicates hashing -> hashtable
-	  * -> for insertion order internal double linkedList
+	  * -> for addion order internal double linkedList
 	  * -> the objects are stored in key-value , pairs.
 	  * 
 	  * 
