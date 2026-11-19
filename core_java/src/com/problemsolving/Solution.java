@@ -77,7 +77,7 @@ public class Solution {
 
 	// 6
 	public void elementFind() {
-		int[] arr = { 10, 20, 30, 40, 50 };
+		int[] arr = { 10, 20, 30, 40, 50, 36 };
 		int target = 36;
 
 		for (Integer i : arr) {
@@ -118,7 +118,7 @@ public class Solution {
 		for (Integer i : arr) {
 			avg += i;
 		}
-		avg = avg / arr.length ;
+		avg = avg / arr.length;
 
 		for (Integer i : arr) {
 			if (i > avg) {
@@ -136,11 +136,13 @@ public class Solution {
 		for (int i = 0; i < arr.length; i++) {
 			int count = 0;
 			for (int j = i + 1; j < arr.length; j++) {
-				if (arr[i] == arr[j])
+				if (arr[i] == arr[j]) {
 					count++;
+				}
+
 			}
-			if (count > 1) {
-				System.out.println(arr[i]);
+			if (count >= 1) {
+				System.out.print(arr[i]+" ");
 			}
 		}
 	}
@@ -151,9 +153,10 @@ public class Solution {
 
 		for (int i = 0; i < arr.length; i++) {
 			int count = 0;
-			for (int j = i + 1; j < arr.length; j++) {
-				if (arr[i] == arr[j])
+			for (int j = 0; j < arr.length; j++) {
+				if (arr[i] == arr[j]) {
 					count++;
+				}
 			}
 
 			System.out.println(arr[i] + " Frequency " + count);
@@ -166,7 +169,7 @@ public class Solution {
 		int[] arr = { 1, 2, 2, 3, 4, 4, 5 };
 		for (int i = 0; i < arr.length; i++) {
 			int count = 0;
-			for (int j = i + 1; j < arr.length; j++) {
+			for (int j = 0; j < arr.length; j++) {
 				if (arr[i] == arr[j])
 					count++;
 			}
@@ -177,7 +180,7 @@ public class Solution {
 	}
 
 	// 12
-	public void mossing() {
+	public void missing() {
 		int[] arr = { 1, 2, 4, 5 };
 		int sum = 0;
 		int temp = 0;
@@ -233,43 +236,70 @@ public class Solution {
 		int right = arr.length - 1;
 
 		while (left < right) {
+			
 			if (arr[left] == 0) {
 				int temp = arr[left];
 				arr[left] = arr[right];
 				arr[right] = temp;
-				left++;
-				right--;
 			}
+			left++;
+			right--;
 		}
+		System.out.println(Arrays.toString(arr));
 	}
 
 	// 16
 	public void checkaArray() {
 		int[] a = { 10, 20, 30 };
 		int[] b = { 10, 20, 30 };
-		if (a.length != b.length)
-			System.out.println("Not same");
+		if (a.length != b.length)System.out.println("Not same");
+			
 		for (int i = 0; i < a.length; i++) {
 			if (a[i] != b[i]) {
 				System.out.println("NOt Same ");
 				break;
 			}
 		}
+		System.out.println("Equal");
 	}
-	//17
+
+	// 17
 	public void removeDuplicate() {
-		int[] arr = {1, 1, 2, 2, 3, 4, 4};
+		int[] arr = { 1, 1, 2, 2, 3, 4, 4 };
 
 		ArrayList<Integer> al = new ArrayList<Integer>();
-		for(Integer i : arr) {
-			if(!al.contains(i))al.add(i);
+		for (Integer i : arr) {
+			if (!al.contains(i))
+				al.add(i);
 		}
 		System.out.println(al);
 	}
 
+	
+	//18 
+	public void moveZeros2() {
+		int[] arr = { 0, 5, 0, 3, 8, 0, 2 };
+
+		int left = 0;
+		int right = 1;
+
+		while (right < arr.length) {
+			
+			if(arr[right] != 0) {
+				int temp =arr[left];
+				arr[left] = arr[right];
+				arr[right] = temp;
+				left++;
+			}
+			
+			right++;
+		}
+		System.out.println(Arrays.toString(arr));
+	}
+	
 	public static void main(String[] args) {
 		Solution obj = new Solution();
-		
+
 		obj.studentSum();
 		obj.highestScore();
 		obj.lowestScore();
@@ -279,9 +309,18 @@ public class Solution {
 		obj.secondHighestScore();
 		obj.average();
 		obj.duplicate();
+		obj.frequencyCount();
+		obj.unique();
+		obj.missing();
+		obj.arrayRotation();
+		obj.rotation();
+		obj.moveZeros();
+		obj.checkaArray();
+		obj.removeDuplicate();
+		obj.moveZeros2();
 		// obj.arrayRotation();
-		//obj.rotation();
-		//obj.removeDuplicate();
+		// obj.rotation();
+		// obj.removeDuplicate();
 	}
 
 }

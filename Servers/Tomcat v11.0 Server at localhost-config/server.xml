@@ -136,7 +136,7 @@
              Note: The pattern used is equivalent to using pattern="common" -->
         <Valve className="org.apache.catalina.valves.AccessLogValve" directory="logs" pattern="%h %l %u %t &quot;%r&quot; %s %b" prefix="localhost_access_log" suffix=".txt"/>
 
-      <Context docBase="Registration" path="/Registration" reloadable="true" source="org.eclipse.jst.jee.server:Registration"/><Context docBase="Calculator" path="/Calculator" reloadable="true" source="org.eclipse.jst.jee.server:Calculator"/><Context docBase="Mini_Project" path="/Mini_Project" reloadable="true" source="org.eclipse.jst.jee.server:Mini_Project"/><Context docBase="Advance Java" path="/Advance_Java" reloadable="true" source="org.eclipse.jst.jee.server:Advance Java"/><Context docBase="session" path="/session" reloadable="true" source="org.eclipse.jst.jee.server:session"/></Host>
+      <Context docBase="Registration" path="/Registration" reloadable="true" source="org.eclipse.jst.jee.server:Registration"/><Context docBase="Calculator" path="/Calculator" reloadable="true" source="org.eclipse.jst.jee.server:Calculator"/><Context docBase="Mini_Project" path="/Mini_Project" reloadable="true" source="org.eclipse.jst.jee.server:Mini_Project"/><Context docBase="Advance Java" path="/Advance_Java" reloadable="true" source="org.eclipse.jst.jee.server:Advance Java"/><Context docBase="session" path="/session" reloadable="true" source="org.eclipse.jst.jee.server:session"/><Context docBase="JSP_Project" path="/JSP_Project" reloadable="true" source="org.eclipse.jst.jee.server:JSP_Project"/><Context docBase="Student" path="/Student" reloadable="true" source="org.eclipse.jst.jee.server:Student"/></Host>
     </Engine>
   </Service>
 </Server>

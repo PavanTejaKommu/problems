@@ -12,6 +12,7 @@ import jakarta.servlet.annotation.WebServlet;
 import jakarta.servlet.http.HttpServlet;
 import jakarta.servlet.http.HttpServletRequest;
 import jakarta.servlet.http.HttpServletResponse;
+import jakarta.servlet.http.HttpSession;
 
 /**
  * Servlet implementation class EmailVerify
@@ -34,6 +35,9 @@ public class EmailVerify extends HttpServlet {
 	@Override
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		response.setContentType("text/html");
+
+		 HttpSession session= request.getSession();
+
 	String email =	request.getParameter("email");
 
 	String url = "jdbc:mysql://localhost:3306/sessions";
@@ -52,6 +56,7 @@ public class EmailVerify extends HttpServlet {
 	ResultSet rs =  ps.executeQuery();
 	if(rs.next()) {
 		rs.close();
+		session.setAttribute("e", email);
 	RequestDispatcher rds =	request.getRequestDispatcher("second.html");
 	rds.forward(request, response);
 	}else {
